@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C21C28AC-D38F-571B-FC46-1733CBED49C5}</ProjectGuid>
+    <ProjectGuid>{828698F6-E058-03BC-877B-0C5D44DA28C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,22 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\AudioSourceController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\BlockController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\BrokenBlockController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\CameraController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\CoinController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\Demo.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\IntroCameraController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\LoadingController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\Loop.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\PointController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\SceneNameAttribute.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\StartController.cs" />
-     <Compile Include="Assets\UnityChan2D\Demo\Scripts\TimeController.cs" />
-     <Compile Include="Assets\UnityChan2D\Scripts\UnityChan2DController.cs" />
-     <None Include="Assets\Animated Trap\SpriteSheets\Trap.txt" />
-     <None Include="Assets\UnityChan2D\Demo\Sounds\Voice\unity-chan_voice_list.txt" />
+     <Compile Include="Assets\scripts\Character.cs" />
+     <Compile Include="Assets\scripts\Destroy.cs" />
+     <Compile Include="Assets\scripts\hp.cs" />
+     <Compile Include="Assets\scripts\player.cs" />
+     <Compile Include="Assets\scripts\reciprocal.cs" />
+     <Compile Include="Assets\scripts\SpawnItem.cs" />
+     <Compile Include="Assets\scripts\track.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  productGUID: 67fa90e23171b4944b76bd1f193e34ae
+  productGUID: c03f1b824a9d5db4dbe3150b654e403c
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: UnityChan2D
+  productName: Ghost arrest
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -508,14 +508,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: UnityChan2D
+  metroPackageName: Ghost arrest
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: UnityChan2D
+  metroApplicationDescription: Ghost arrest
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -590,8 +590,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 9a2fd0cc-cb32-4427-b77a-918b8d4868ae
-  projectName: UnityChan2D
+  cloudProjectId: 0125d36e-3686-4b03-97c6-8d30b43be3e4
+  projectName: Ghost arrest
   organizationId: ccc25687
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
