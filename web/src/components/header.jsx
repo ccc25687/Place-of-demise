@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <video className ="main-video" src="../static/ball.mp4"></video>
+                <video className="banner-video" src="https://s23.aconvert.com/convert/p3r68-cdx67/lu24b-mfbzh.mp4" autoPlay muted/>
             </div>
         );
     }
