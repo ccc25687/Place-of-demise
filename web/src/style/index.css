@@ -6,8 +6,46 @@ a:link, a:visited, a:hover, a:active {
   color: unset;
   text-decoration: none; }
 
-.banner-video {
-  min-width: 100%;
-  height: auto; }
+.header {
+  position: relative;
+  margin-bottom: 20px; }
+  .header .banner-video {
+    width: 100%;
+    height: auto; }
+  .header .go-bottom-button {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7); }
+    .header .go-bottom-button:hover {
+      cursor: pointer; }
+
+main {
+  display: flex;
+  padding: 0px 10%; }
+  main .nav-wrap, main .content-wrap {
+    flex-grow: 1;
+    background: skyblue; }
+  main .nav-wrap {
+    display: flex;
+    flex-direction: column; }
+  main .nav, main .content {
+    border: 1px solid; }
+  main .content {
+    text-align: center;
+    background: gray; }
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column; }
+    main .nav-wrap {
+      flex-direction: row; } }
 
 /*# sourceMappingURL=index.css.map */
