@@ -4,7 +4,7 @@ class ContentCharacter extends Component {
     render() {
         return (
             <div className="content content-character">
-                角色內容區
+                角色內容
             </div>
         );
     }

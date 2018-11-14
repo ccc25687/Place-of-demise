@@ -7,9 +7,12 @@ for (let i = 0; i < h5Dom.length; i++) {
 }
 
 class App extends Component {
+  constructor(){
+    super();
+  }
   render() {
     return (
-      <div className="App">
+      <div>
         <Header />
         <Main />
       </div>

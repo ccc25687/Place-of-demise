@@ -4,7 +4,7 @@ class ContentMaterial extends Component {
     render() {
         return (
             <div className="content content-material">
-                素材內容區
+                素材內容
             </div>
         );
     }
