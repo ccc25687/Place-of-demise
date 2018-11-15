@@ -46,7 +46,8 @@ module.exports = {
             options: {
                 presets: ['es2015']
             }
-        }]
+        }],
+        exclude:/node_modules/
       },
     ]
   }

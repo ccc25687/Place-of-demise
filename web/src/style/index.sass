@@ -1,47 +1,50 @@
-$leftNavH: 400
-$navLink: 7;
-@mixin leftNav($w:0,$h:0,$left:0,$top:0,$bgcolor:#fff)
-    width: $w
-    height: $h
-    left: $left
-    top: $top
-    background-color: $bgcolor
 body
-    width: 100vw
-    height: 100vh
-    background: rgba(0,0,0,.85)
-    color: #fff
-#mainTitle
-    font-size: 100px
+    margin: 0
+    height: 3000px
 a:link,a:visited,a:hover,a:active
     color: unset
     text-decoration: none
-.leftNav
-    white-space: nowrap
-    position: absolute
-    +leftNav(0vw,#{$leftNavH}px,-200px,calc(50vh - 200px),rgba(0,0,0,.6))
-    overflow: hidden
-    transition: width .5s
-    & a
-        color: #fff
-        flex: 1
+ul,li,h1,h2,h3,h4
+    margin: 0
+    padding: 0
+.header
+    position: relative
+    margin-bottom: 20px
+    & .banner-video
+        position: absolute
+    & .banner-image
+        position: absolute
+        z-index: 1
+    & .go-bottom-button
+        position: absolute
+        bottom: 0
+        left: calc(50% - 25px)
+        margin: 10px auto
+        width: 50px
+        height: 50px
+        line-height: 50px
         text-align: center
-        height: #{$leftNavH/$navLink}px
-        line-height: #{$leftNavH/$navLink}px
-.leftNavLight
-    transition: opacity 2s
-    opacity: 0
-    position: absolute
-    border-radius: 50%
-    z-index: 1
-    +leftNav(400px,#{$leftNavH}px,-200px,calc(50vh - 200px))
-    background: radial-gradient(white,skyblue)
-    // animation-name: leftNavLight
-    // animation-duration: 2s
-    // animation-iteration-count: infinite
-    // animation-delay: 3s
-// @keyframes leftNavLight
-//     0% {opacity: 0}
-//     50% {opacity: .3}
-//     75% {opacity: 0}
-//     100% {opacity: .3}
+        color: #fff
+        border-radius: 50%
+        background: rgba(0,0,0,0.7)
+        &:hover
+            cursor: pointer
+main
+    display: flex
+    padding: 0px 10%
+    & .nav-wrap,& .content-wrap
+        flex-grow: 1
+        background: skyblue
+    & .nav-wrap
+        display: flex
+        flex-direction: column
+    & .nav,& .content
+        border: 1px solid
+    & .content
+        text-align: center
+        background: gray
+@media screen and (max-width: 1000px)
+    main
+        flex-direction: column
+        & .nav-wrap
+            flex-direction: row
