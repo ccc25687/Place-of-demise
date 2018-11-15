@@ -14,8 +14,10 @@ ul, li, h1, h2, h3, h4 {
   position: relative;
   margin-bottom: 20px; }
   .header .banner-video {
-    width: 100%;
-    height: auto; }
+    position: absolute; }
+  .header .banner-image {
+    position: absolute;
+    z-index: 1; }
   .header .go-bottom-button {
     position: absolute;
     bottom: 0;
