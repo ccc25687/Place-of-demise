@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dying Land", "Dying Land.csproj", "{7E756B99-7C42-F109-7DD5-D1B050C4F18A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dying Land.Plugins", "Dying Land.Plugins.csproj", "{7134E47F-428C-C884-F702-2F50673C5DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dying Land.Editor.Plugins", "Dying Land.Editor.Plugins.csproj", "{ECC9885C-FA15-4286-2A57-7687B0643C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dying Land.Editor", "Dying Land.Editor.csproj", "{D659C05D-350F-DD8D-A5EE-49E28ED90790}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E756B99-7C42-F109-7DD5-D1B050C4F18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E756B99-7C42-F109-7DD5-D1B050C4F18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E756B99-7C42-F109-7DD5-D1B050C4F18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E756B99-7C42-F109-7DD5-D1B050C4F18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7134E47F-428C-C884-F702-2F50673C5DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7134E47F-428C-C884-F702-2F50673C5DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7134E47F-428C-C884-F702-2F50673C5DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7134E47F-428C-C884-F702-2F50673C5DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC9885C-FA15-4286-2A57-7687B0643C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC9885C-FA15-4286-2A57-7687B0643C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC9885C-FA15-4286-2A57-7687B0643C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC9885C-FA15-4286-2A57-7687B0643C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D659C05D-350F-DD8D-A5EE-49E28ED90790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D659C05D-350F-DD8D-A5EE-49E28ED90790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D659C05D-350F-DD8D-A5EE-49E28ED90790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D659C05D-350F-DD8D-A5EE-49E28ED90790}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
