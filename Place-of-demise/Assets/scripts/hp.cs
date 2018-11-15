@@ -2,20 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Sprites;
+using System.Threading;
+//using System;
 
-public class hp : MonoBehaviour {
+public class hp : MonoBehaviour{
 
 	public GameObject[] image;//生命的圖片
 	public float superTime;//無敵時間
+    private int life;//生命
 
-	private Animator hurt_animator;//受傷害動畫
+    private Animator hurt_animator;//受傷害動畫
 	private BoxCollider2D collider2d;//傷害的碰撞器
 	private SpriteRenderer sprite_falsh;//玩家圖片
 	public float speed;//閃爍平率
 	private bool damage;//傷害的狀態
-	private float time_i;//計時
-	private int life;//生命
-	void Start(){
+	private float time_i;//閃爍用計時器
+    //private Coroutine collision;
+    private ArrayList co_list = new ArrayList();
+
+
+
+    void Start(){
 		damage=false;
 		life = 3;
 		collider2d=GetComponent<BoxCollider2D> ();
@@ -23,30 +30,37 @@ public class hp : MonoBehaviour {
 		sprite_falsh = GameObject.Find ("player-climb-4").GetComponent<SpriteRenderer> ();
 	}
 
-	void Update(){
-		falsh_time ();
-	}
-
-	void OnTriggerEnter2D(Collider2D co){
+    void Update() {
+        falsh_time();//判斷是否為無敵時間
+    }
+    
+	void OnTriggerStay2D(Collider2D co){
 		if (co.gameObject.tag == "monster") {
-			collider2d.enabled = false;//關掉hurt碰撞器
-			life -= 1;
-			life = Mathf.Clamp (life,0, 3);
-			life_image ();
-			hurt_animator.Play ("hurt");
-			StartCoroutine (falsh_animator ());//呼叫執行緒
-		}
+            co_list.Add(1);
+            //collider2d.enabled = false;//關掉hurt碰撞器
+            if (co_list.Count <= 1) {
+                life -= 1;
+                life = Mathf.Clamp(life, 0, 3);
+                hurt_animator.Play("hurt");//受傷動畫
+                StartCoroutine(falsh_animator());
+                life_image();//血條圖片
+                Destroy(co.gameObject);
+            }
+        }
 	}
 
+    IEnumerator falsh_animator()
+    {
+        damage = true;
+        yield return new WaitForSeconds(superTime);//結束無敵時間為superTime,結束後往下執行
+        co_list.Clear();
+        damage = false;
+        time_i = 0f;
+        sprite_falsh.color = Color.white;
+        collider2d.enabled = true;//打開hurt的碰撞器的box collider
+    }
 
-	IEnumerator falsh_animator(){
-		damage = true;
-		yield return new WaitForSeconds (superTime);//結束無敵時間為superTime,結束後往下執行
-		damage=false;
-		collider2d.enabled = true;
-	}
-
-	void falsh_time (){
+    void falsh_time (){//閃爍
 		if (damage) {
 			time_i += Time.deltaTime;
 			if (time_i % speed < speed/2f) {
@@ -54,32 +68,19 @@ public class hp : MonoBehaviour {
 			} else {
 				sprite_falsh.color = Color.white;
 			}
-		} else {
-			time_i= 0f;
-			sprite_falsh.color =Color.white;
-		}
+		} 
 	}
 
-	void life_image(){
-		if (life == 3) {
-			for(int i=0;i<=life;i++)
-				image[i].SetActive (true);
-		}
-		if (life == 2) {
-			for(int i=0;i<=life;i++)
-				image[i].SetActive (true);
-			image [3].SetActive (false);
-		}
-		if (life == 1) {
-			for(int i=0;i<=life;i++)
-				image[i].SetActive (true);
-			image [2].SetActive (false);
-			image [3].SetActive (false);
-		}
-		if (life == 0) {
-			image [1].SetActive (false);
-			image [2].SetActive (false);
-			image [3].SetActive (false);
-		}
+	void life_image(){//UI介面的血量
+        for (int i = 0; i <= 3; i++) {
+            if (i == life){
+                image[i].SetActive(true);
+            }
+            else {
+                image[i].SetActive(false);
+            }
+        }
 	}
+
+
 }

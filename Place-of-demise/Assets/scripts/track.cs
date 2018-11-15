@@ -22,7 +22,7 @@ public class track : MonoBehaviour {
 
 		if (V.magnitude >= 0.1f) {//V的返回向量長度
 			//thingPos = Vector2.LerpUnclamped (thingPos, purposePos, speed*Time.deltaTime);//攝影機專用
-			thingPos=Vector2.MoveTowards(thingPos,purposePos,speed*Time.deltaTime);
+			thingPos=Vector2.MoveTowards(thingPos,purposePos,speed*Time.deltaTime);//等速移動
 			gameObject.transform.position = thingPos;
 		}
 	}

@@ -7,6 +7,7 @@ public class reciprocal : MonoBehaviour {
 	
 	public int max;
 	public Text time_ui;
+
 	void Start(){
 		time_ui.text = max.ToString();
 		InvokeRepeating ("timer", 1, 1);
