@@ -35,11 +35,9 @@ class Main extends Component {
                 <main>
                     <Nav
                         navarr={this.state.navarr}
-                        urlChange={this.urlChange}
                     />
                     <Content
                         navarr={this.state.navarr}
-                        urlChange={this.urlChange}
                     />
                 </main>
             </Router>
