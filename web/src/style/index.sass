@@ -1,0 +1,48 @@
+body
+    margin: 0
+    height: 3000px
+a:link,a:visited,a:hover,a:active
+    color: unset
+    text-decoration: none
+ul,li,h1,h2,h3,h4
+    margin: 0
+    padding: 0
+.header
+    position: relative
+    margin-bottom: 20px
+    & .banner-video
+        width: 100%
+        height: auto
+    & .go-bottom-button
+        position: absolute
+        bottom: 0
+        left: calc(50% - 25px)
+        margin: 10px auto
+        width: 50px
+        height: 50px
+        line-height: 50px
+        text-align: center
+        color: #fff
+        border-radius: 50%
+        background: rgba(0,0,0,0.7)
+        &:hover
+            cursor: pointer
+main
+    display: flex
+    padding: 0px 10%
+    & .nav-wrap,& .content-wrap
+        flex-grow: 1
+        background: skyblue
+    & .nav-wrap
+        display: flex
+        flex-direction: column
+    & .nav,& .content
+        border: 1px solid
+    & .content
+        text-align: center
+        background: gray
+@media screen and (max-width: 1000px)
+    main
+        flex-direction: column
+        & .nav-wrap
+            flex-direction: row
