@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/WeAssets/GhostArrest.unity
+- path: Assets/WeAssets/UiTest.unity
   isLoaded: 1
   isActive: 1
