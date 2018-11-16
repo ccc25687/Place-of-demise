@@ -3,25 +3,32 @@ import React, { Component } from 'react';
 class Header extends Component {
     constructor() {
         super();
-        this.state={
-            homeVideoDisplay:'none',
-            homeImgDisplay:'block'
+        this.state = {
+
         }
     }
-    componentDidMount(){
+    componentDidMount() {
+        this.refs.homeVideo.src=require('../static/ball.mp4');
+        setTimeout(()=>{
+            this.refs.mask.style.opacity='0';
+            this.refs.homeImg.style.opacity='0';
+            this.refs.homeVideo.style.opacity='1';
+        },1500);
+    }
+    showVideo = () => {
 
     }
-    showHomeVideo=()=>{
-        this.setState({
-            homeVideoDisplay:'block',
-            homeImgDisplay:'none'
-        })
+    init = () => {
+
     }
     render() {
+        // const homeVideoStyle=this.refs.homeVideo.style;
         return (
-            <section className="header" style={{width:'100%',height:window.screen.height / 2+"px"}}>
-                <video style={{display:this.state.homeVideoDisplay}}ref={'homeVideo'} onLoadStart={this.showHomeVideo} className="banner-video" src="../src/static/ball.mp4" type="video/mp4" autoPlay muted loop width="100%" height={window.screen.height / 2+"px"}/>
-                <img style={{display:this.state.homeImgDisplay}}ref={'homeImg'} className="banner-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHmCsLb6mCrfj5wgUXOVcwZXaYeU3q1KRwhy8r7KkLJQjHMMX" width="100%" height={window.screen.height / 2+"px"} alt=""/>
+            <section ref={'header'}className="header">
+                {/* <video style={{display:this.state.homeVideoDisplay}}ref={'homeVideo'} onLoadStart={this.showHomeVideo} className="banner-video" src="../src/static/ball.mp4" type="video/mp4" autoPlay muted loop width="100%" height={window.screen.height / 2+"px"}/> */}
+                <div ref={'homeImg'} className="banner-image"></div>
+                <div ref={'mask'}className="mask"></div>
+                <video ref={'homeVideo'} className="banner-video" type="video/mp4" autoPlay muted loop/>
                 {/* <div className="go-bottom-button">往下</div> */}
             </section>
         );
