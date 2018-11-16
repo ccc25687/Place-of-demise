@@ -1,38 +1,36 @@
 import React, { Component } from 'react';
-
 class Header extends Component {
     constructor() {
         super();
         this.state = {
-
+            temporarilyDom: [
+                <div key='0' className="banner-image"></div>,
+                <div key='1' className="mask"></div>
+            ],
+            retainDom: [
+                // <button key='0' className="go-main">往大廳</button>,
+                // <button key='1' className="dl">下載</button>
+            ],
+            srcDom: ''
         }
     }
     componentDidMount() {
-        this.refs.homeVideo.src=require('../static/ball.mp4');
-        setTimeout(()=>{
-            this.refs.mask.style.opacity='0';
-            this.refs.homeImg.style.opacity='0';
-            this.refs.homeVideo.style.opacity='1';
-        },1500);
-    }
-    showVideo = () => {
 
-    }
-    init = () => {
-
+        setTimeout(() => {
+            this.setState({
+                srcDom: <video key='0' src={require('../static/ball.mp4')} className="banner-video" type="video/mp4" autoPlay muted loop />,
+                temporarilyDom: null
+            })
+        }, 2000)
     }
     render() {
-        // const homeVideoStyle=this.refs.homeVideo.style;
         return (
-            <section ref={'header'}className="header">
-                {/* <video style={{display:this.state.homeVideoDisplay}}ref={'homeVideo'} onLoadStart={this.showHomeVideo} className="banner-video" src="../src/static/ball.mp4" type="video/mp4" autoPlay muted loop width="100%" height={window.screen.height / 2+"px"}/> */}
-                <div ref={'homeImg'} className="banner-image"></div>
-                <div ref={'mask'}className="mask"></div>
-                <video ref={'homeVideo'} className="banner-video" type="video/mp4" autoPlay muted loop/>
-                {/* <div className="go-bottom-button">往下</div> */}
+            <section className="header">
+                {this.state.temporarilyDom}
+                {this.state.retainDom}
+                {this.state.srcDom}
             </section>
         );
     }
 }
-
 export default Header;
