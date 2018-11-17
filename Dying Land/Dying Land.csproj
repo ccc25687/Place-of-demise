@@ -748,13 +748,6 @@
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\Character.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\Destroy.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\hp.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\player.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\reciprocal.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\SpawnItem.cs" />
-    <Compile Include="Assets\Ghost arrest\scripts\track.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -766,6 +759,13 @@
     <Compile Include="Assets\WeAssets\CameraTest\c\cctvEnter.cs" />
     <Compile Include="Assets\WeAssets\CameraTest\c\cctvExit.cs" />
     <Compile Include="Assets\WeAssets\CameraTest\c\Restarter.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\Character.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\Destroy.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\hp.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\player.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\reciprocal.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\SpawnItem.cs" />
+    <Compile Include="Assets\WeAssets\Ghost arrest\scripts\track.cs" />
     <Compile Include="Assets\WeAssets\UiTest\c\autogridlayoutfiles\AutoGridLayout.cs" />
     <Compile Include="Assets\WeAssets\UiTest\c\backpack\ItemContent.cs" />
     <Compile Include="Assets\WeAssets\UiTest\c\GameManager.cs" />
