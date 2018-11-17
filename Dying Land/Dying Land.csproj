@@ -758,6 +758,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\WeAssets\CameraTest\c\cctvEnter.cs" />
     <Compile Include="Assets\WeAssets\CameraTest\c\cctvExit.cs" />
+    <Compile Include="Assets\WeAssets\CameraTest\c\changexxxxx.cs" />
     <Compile Include="Assets\WeAssets\CameraTest\c\Restarter.cs" />
     <Compile Include="Assets\WeAssets\Ghost arrest\scripts\Character.cs" />
     <Compile Include="Assets\WeAssets\Ghost arrest\scripts\Destroy.cs" />
